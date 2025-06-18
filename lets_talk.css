@@ -1,0 +1,148 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f0f0;
+}
+
+/* Section Styling */
+.talk-section {
+  background: #6a5acd;
+  padding: 4rem 2rem;
+  color: #fff;
+}
+
+/* Container Layout */
+.talk-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  color: #333;
+}
+
+/* Form Area */
+.form-area {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+}
+.talk-title {
+  font-size: 2.5rem;
+  color: #6a5acd;
+  margin-bottom: 0.5rem;
+}
+.talk-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.submit-btn {
+  margin-top: 1rem;
+  background: #6a5acd;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.submit-btn:hover {
+  background: #5948c7;
+}
+
+/* Service Area */
+.service-area {
+  flex: 1;
+  background: #f5f5ff;
+  padding: 2rem;
+}
+.service-area h2 {
+  font-size: 1.6rem;
+  color: #6a5acd;
+  margin-bottom: 1rem;
+}
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.service-list li {
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #6a5acd;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.service-list li:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .talk-container {
+    flex-direction: column;
+  }
+  .form-area, .service-area {
+    padding: 1.5rem;
+  }
+}
+
+.service-list.interactive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.service-option {
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1.5px solid #6a5acd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.service-option:hover {
+  background: #f2f2ff;
+}
+
+.service-option.selected {
+  background: #6a5acd;
+  color: #fff;
+  border-color: #5948c7;
+  font-weight: 600;
+}

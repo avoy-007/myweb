@@ -1,0 +1,69 @@
+/* Hero Video */
+.ecom-hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-overlay {
+  z-index: 1;
+  position: relative;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* Showcase Section */
+.ecom-showcase {
+  position: relative;
+  padding: 4rem 1rem;
+  background: #f0f0f0;
+  text-align: center;
+}
+.gallery-overlay-text {
+  margin-bottom: 2rem;
+}
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media(min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Footer Overlay */
+.ecom-footer {
+  background: linear-gradient(135deg, #0e8c7f, #066257);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.footer-overlay p {
+  margin: 0;
+  font-size: 0.95rem;
+}

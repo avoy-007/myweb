@@ -113,3 +113,9 @@
   padding: 1rem 0;
   font-size: 0.85rem;
 }
+
+logo {
+	font-size: 1.5rem;
+	color: var(--primary);
+	font-weight: 600;
+}

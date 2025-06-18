@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Let's Talk</title>
+  <link rel="stylesheet" href="lets_talk.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <section class="talk-section">
+    <div class="talk-container">
+      <div class="form-area">
+        <h1 class="talk-title">LET’S TALK</h1>
+        <p class="talk-description">Tell us what you need and we’ll help you make it happen.</p>
+        <form>
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">How can we help? *</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Service Area with Multichoice -->
+  <div class="service-area">
+    <h2>Our Services</h2>
+    <div class="service-list interactive">
+      <button type="button" class="service-option" data-value="seo">SEO Optimization</button>
+      <button type="button" class="service-option" data-value="webdev">Web Development</button>
+      <button type="button" class="service-option" data-value="ecommerce">eCommerce Strategy</button>
+      <button type="button" class="service-option" data-value="socialmedia">Social Media Advertising</button>
+      <button type="button" class="service-option" data-value="branding">Branding Photography</button>
+      <button type="button" class="service-option" data-value="email">Email Marketing</button>
+      <button type="button" class="service-option" data-value="googleads">Google Advertising</button>
+      <button type="button" class="service-option" data-value="sms">SMS Marketing</button>
+      <button type="button" class="service-option" data-value="facebookads">Facebook Ads</button>
+      <button type="button" class="service-option" data-value="other">Other</button>
+    </div>
+    <!-- Hidden input to capture selected values -->
+    <input type="hidden" id="selectedServices" name="selectedServices" />
+  </div>
+
+  <script>
+  const buttons = document.querySelectorAll(".service-option");
+  const hiddenInput = document.getElementById("selectedServices");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("selected");
+      const selected = Array.from(buttons)
+        .filter(b => b.classList.contains("selected"))
+        .map(b => b.dataset.value);
+      hiddenInput.value = selected.join(",");
+    });
+  });
+</script>
+
+</body>
+</html>
